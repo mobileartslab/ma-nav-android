@@ -1,4 +1,4 @@
-package com.carefirstpraxis.ma_nav_android
+package com.mobileartslab.ma_nav_android
 
 import org.junit.Test
 
