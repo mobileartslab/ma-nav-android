@@ -1,4 +1,4 @@
-package com.carefirstpraxis.ma_nav_android
+package com.mobileartslab.ma_nav_android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.carefirstpraxis.ma_nav_android.ui.theme.ManavandroidTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.mobileartslab.ma_nav_android.ui.theme.ManavandroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +25,27 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    val navController = rememberNavController()
+                    NavHost(navController = navController, startDestination = Screens.Splash) {
+                        composable(route = Screens.Splash) {
+                            SplashScreen(navController = navController)
+                        }
+
+                        composable(route = Screens.Dashboard) {
+                            DashBoardScreen(navController = navController)
+                        }
+                    }
                 }
             }
+
         }
     }
+}
+
+
+@Composable
+fun Navigation() {
+
 }
 
 @Composable

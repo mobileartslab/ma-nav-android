@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.carefirstpraxis.ma_nav_android'
+    namespace 'com.mobileartslab.ma_nav_android'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.carefirstpraxis.ma_nav_android"
+        applicationId "com.mobileartslab.ma_nav_android"
         minSdk 33
         targetSdk 33
         versionCode 1
@@ -47,6 +47,7 @@ android {
 }
 
 dependencies {
+    def nav_version = "2.5.3"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
@@ -54,6 +55,7 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
     implementation 'androidx.compose.material3:material3:1.0.0-alpha11'
+    implementation "androidx.navigation:navigation-compose:$nav_version"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
