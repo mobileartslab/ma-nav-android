@@ -31,6 +31,10 @@ class MainActivity : ComponentActivity() {
                             SplashScreen(navController = navController)
                         }
 
+                        composable(route = Screens.Login) {
+                            LoginScreen(navController = navController)
+                        }
+
                         composable(route = Screens.Dashboard) {
                             DashBoardScreen(navController = navController)
                         }

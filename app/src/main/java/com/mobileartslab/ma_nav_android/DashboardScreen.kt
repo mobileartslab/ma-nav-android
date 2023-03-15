@@ -35,6 +35,6 @@ fun DashBoardScreen(navController: NavController) {
 
 @Preview(showBackground = true)
 @Composable
-fun LoginScreenPreview() {
+fun DashBoardScreenPreview() {
     DashBoardScreen(navController = rememberNavController())
 }
